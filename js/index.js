@@ -2,8 +2,17 @@
 
 window.addEventListener('load', (event) => alert('NOT A SCAM! You just won a free trip to a beach somewhere!'));
 
+let aNav = document.querySelectorAll('.nav-link');
+aNav.addEventListener('click', (event) => aNav.style.background = 'black')
+
 let sandPic = document.querySelector('.intro img');
 sandPic.addEventListener('drag', (event) => sandPic.style.visibility = 'hidden');
+
+let mapPic = document.querySelector('.mapPic');
+mapPic.addEventListener('contextmenu', (event) => mapPic.style.visibility = 'hidden');
+
+let boatPic = document.querySelector('.boatPic');
+boatPic.addEventListener('click', (event) => boatPic.style.visibility = 'hidden');
 
 let logo = document.querySelector('.logo-heading');
 logo.addEventListener('dblclick', (event) => {logo.textContent = 'The Ritual is Finished',
@@ -23,6 +32,7 @@ mountButton.style.background = 'yellow'});
 let getawayButton = document.querySelectorAll('.btn')[2];
 getawayButton.addEventListener('mouseleave', (event) => {alert('Just used your camera to get your picture... we need it... for things.'),
 getawayButton.style.background = 'green'});
+
 
 
 
