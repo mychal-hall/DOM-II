@@ -3,7 +3,10 @@
 window.addEventListener('load', (event) => alert('NOT A SCAM! You just won a free trip to a beach somewhere!'));
 
 let aNav = document.querySelectorAll('.nav-link');
-aNav.addEventListener('click', (event) => aNav.style.background = 'black')
+console.log(aNav);
+aNav.forEach(node => {
+    node.addEventListener('click', event => (event.target.style.background = 'black'))
+})
 
 let sandPic = document.querySelector('.intro img');
 sandPic.addEventListener('drag', (event) => sandPic.style.visibility = 'hidden');
@@ -34,5 +37,5 @@ getawayButton.addEventListener('mouseleave', (event) => {alert('Just used your c
 getawayButton.style.background = 'green'});
 
 
-
+//
 
